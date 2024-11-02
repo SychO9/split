@@ -30,6 +30,9 @@
         "flarum/core": "^2.0.0"
     },
     "extra": {
+        "branch-alias": {
+            "dev-master": "2.0-dev"
+        },
         "flarum-extension": {
             "title": "FoF Split",
             "category": "feature",
