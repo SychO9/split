@@ -143,7 +143,6 @@ class SplitDiscussionHandler
             ->whereBetween('number', [$start_post_number, $end_post_number])
             ->update(['discussion_id' => $discussion->id]);
 
-        $discussion->post_number_index = $end_post_number;
         $discussion->save();
 
         // Update relationship posts on new discussion.
@@ -169,7 +168,6 @@ class SplitDiscussionHandler
             $post->save();
         });
 
-        $discussion->post_number_index = $number;
         $discussion->save();
     }
 

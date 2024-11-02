@@ -41,11 +41,13 @@ class SplitController implements RequestHandlerInterface
             new SplitDiscussion($title, $start_post_id, $end_post_number, $actor)
         );
 
-        return $this->api->forResource(DiscussionResource::class)
+        return $this->api
+            ->forResource(DiscussionResource::class)
             ->forEndpoint('show')
             ->handle(
-                $request->withUri($request->getUri()->withPath('/api/discussions/' . $discussion->id))
+                $request->withUri($request->getUri()->withPath('/discussions/' . $discussion->id))
                     ->withMethod('GET')
+                    ->withParsedBody([])
             );
     }
 }
