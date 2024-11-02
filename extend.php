@@ -12,8 +12,6 @@
 
 namespace FoF\Split;
 
-use Flarum\Api\Serializer\DiscussionSerializer;
-use Flarum\Database\AbstractModel;
 use Flarum\Discussion\Event\Renamed;
 use Flarum\Extend;
 use FoF\Split\Events\DiscussionWasSplit;
